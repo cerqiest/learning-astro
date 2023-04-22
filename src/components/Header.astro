@@ -1,0 +1,17 @@
+---
+import Hamburger from "./Hamburger.astro";
+import Navigation from "./Navigation.astro";
+
+const { pageTitle, headerColor } = Astro.props;
+---
+
+<Hamburger />
+<Navigation />
+<h1>{pageTitle}</h1>
+
+<style define:vars={{ headerColor }}>
+  h1 {
+    color: var(--headerColor);
+    font-size: 3.5rem;
+  }
+</style>
